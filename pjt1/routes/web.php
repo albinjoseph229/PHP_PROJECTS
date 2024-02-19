@@ -18,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 });
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 })->name('/');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+Route::get('/', [App\Http\Controllers\UserController::class,'index']) ->name ('adminregistration');
